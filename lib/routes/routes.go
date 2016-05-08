@@ -38,7 +38,7 @@ func NewServer() (router *gin.Engine) {
 
 func (s *Service) Start() (err error) {
 	router := s.router
-	router.GET("get_heard/hc", s.healthCheckHandler)
+	router.GET("big_tent/hc", s.healthCheckHandler)
 	err = router.Run(s.port)
 	return err
 }
